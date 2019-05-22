@@ -1,6 +1,6 @@
 {
   "name": "vue-web-component-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Boilerplate to generate a web component based on Vue using Webpack and @vue/web-component-wrapper",
   "scripts": {
     "dev": "webpack",
