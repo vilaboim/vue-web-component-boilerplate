@@ -1,0 +1,32 @@
+.DS_Store
+node_modules
+/dist
+/tmp/*
+
+# tests files
+/tests/e2e/videos/
+/tests/e2e/screenshots/
+
+# ssl certificates
+cert.pem
+key.pem
+
+# local env files
+.env
+
+# npm
+package-lock.json
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*

@@ -1,0 +1,81 @@
+{
+  "name": "vue-web-component-boilerplate",
+  "version": "0.0.0",
+  "description": "Boilerplate to generate a web component based on Vue using Webpack and @vue/web-component-wrapper",
+  "scripts": {
+    "dev": "webpack",
+    "build": "webpack --mode=production",
+    "serve": "http-server dist/ -a localhost -p 8080",
+    "lint": "eslint --ext .js,.vue src --fix",
+    "release:tags": "git push && git push --tags",
+    "release:patch": "npm version patch && npm run release:tags",
+    "release:minor": "npm version minor && npm run release:tags",
+    "release:major": "npm version major && npm run release:tags"
+  },
+  "author": "Lucas Vilaboim <lucas@vilaboim.com> (https://www.vilaboim.com)",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "core-js": "^3.1.2",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.4.5",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "@vue/web-component-wrapper": "^1.2.0",
+    "autoprefixer": "^9.1.5",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^2.0.2",
+    "css-loader": "^2.1.1",
+    "current-script-polyfill": "^1.0.0",
+    "dotenv-webpack": "^1.5.7",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "globby": "^9.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "minimist": "^1.2.0",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^1.1.1",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.32.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "engines": {
+    "yarn": "1",
+    "npm": "6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "main": "index.js",
+  "repository": "git@github.com:vilaboim/vue-web-component-boilerplate.git",
+  "license": "MIT"
+}
