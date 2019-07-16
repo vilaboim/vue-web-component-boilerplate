@@ -14,8 +14,9 @@ key.pem
 # local env files
 .env
 
-# npm
+# lock files
 package-lock.json
+yarn.lock
 
 # Log files
 npm-debug.log*
